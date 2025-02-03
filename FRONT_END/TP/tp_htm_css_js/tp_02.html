@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Navbar with Blue Accent</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            z-index: 999;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #007bff; /* Blue logo color */
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #007bff; /* Blue hover effect */
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                margin-top: 15px;
+            }
+
+            .nav-links li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">Your Logo</a>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

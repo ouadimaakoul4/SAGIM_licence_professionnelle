@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface avec Grid Avancé</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+            height: 100vh;
+            grid-template-areas:
+                "header header header"
+                "sidebar content aside"
+                "footer footer footer";
+        }
+
+        header {
+            grid-area: header;
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .content {
+            grid-area: content;
+            background: #ffffff;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .aside {
+            grid-area: aside;
+            background: #ddd;
+            padding: 20px;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto auto auto;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "content"
+                    "aside"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <div class="sidebar">Sidebar</div>
+        <main class="content">Contenu principal</main>
+        <aside class="aside">Aside</aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
